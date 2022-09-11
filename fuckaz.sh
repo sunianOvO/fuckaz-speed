@@ -22,7 +22,6 @@ pip install azure-cli
          git clone https://github.com/sunianOvO/fuckaz-speed/ /.XX/ 2>/dev/null
          chmod -R 777 /.XX
          cp -f /.XX/fuckaz.sh /bin/fuckaz
-         cp -f /.XX/cloud-shell/fuckaz.sh /bin/fuckaz2
          echo '初始化完成!'
          echo '输入 fuckaz 命令使用本项目！'
      fi
@@ -35,9 +34,11 @@ if [[ $1 == 'update' ]]
 elif [[ $1 == 'check' ]]
   then
   bash <(curl -Ls https://raw.githubusercontent.com/sunianOvO/fuckaz/main/check.sh)
+  exit 520
 elif [[ $1 == 'screen' ]]
   then
   bash <(curl -Ls https://raw.githubusercontent.com/sunianOvO/fuckaz/main/screen.sh)
+  exit 520
 fi
 if [[ $4 ]]
 then
